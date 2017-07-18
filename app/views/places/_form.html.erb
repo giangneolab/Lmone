@@ -1,0 +1,72 @@
+<%= form_with(model: place, local: true) do |form| %>
+  <% if place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% place.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :place_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :place_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :logo_url %>
+    <%= form.text_field :logo_url, id: :place_logo_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opening %>
+    <%= form.number_field :opening, id: :place_opening %>
+  </div>
+
+  <div class="field">
+    <%= form.label :closing %>
+    <%= form.number_field :closing, id: :place_closing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, id: :place_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :introduce %>
+    <%= form.text_area :introduce, id: :place_introduce %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_from %>
+    <%= form.text_field :price_from, id: :place_price_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_to %>
+    <%= form.text_field :price_to, id: :place_price_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :place_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avg_rating %>
+    <%= form.text_field :avg_rating, id: :place_avg_rating %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
