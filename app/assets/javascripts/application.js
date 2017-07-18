@@ -12,4 +12,20 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+//= require bootstrap-sprockets
+//= require rs-plugin/js/jquery.themepunch.tools.min.js
+//= require rs-plugin/js/jquery.themepunch.revolution.min.js
+//= require selectbox/jquery.selectbox-0.1.3.min.js
+//= require datepicker/bootstrap-datepicker.js
+//= require waypoints.min.js
+//= require counter-up/jquery.counterup.min.js
+//= require isotope/isotope.min.js
+//= require isotope/jquery.fancybox.pack.js
+//= require isotope/isotope-triger.js
+//= require countdown/jquery.syotimer.js
+//= require options/optionswitcher.js
+//= require isotope/isotope-triger.js
+//= require custom.js

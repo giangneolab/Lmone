@@ -28,6 +28,7 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
 gem 'factory_girl_rails', '~> 4.7'
+gem 'faker', '~> 1.6', '>= 1.6.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

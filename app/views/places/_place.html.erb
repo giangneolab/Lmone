@@ -1,0 +1,60 @@
+           <!-- PLACE-->
+              <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="thumbnail deals packagesPage">
+                  <img src="img/home/deal/deal-01.jpg" alt="deal-image">
+                  <div class="discountInfo">
+                  <% if place.promotion? %>
+                      <div class="discountOffer">
+                      <h4>
+                        <%= place.promotions.last.name %>
+                        <!-- 50%<span>OFF</span> -->
+                      </h4>
+                    </div>
+                  <% end %>
+
+                    <ul class="list-inline rating homePage">
+                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    </ul>
+                    <ul class="list-inline duration">
+                      <li class='date-up'>7 <i class="fa fa-calendar"></i></li>
+                      <% if place.comments %>
+                        <li> place.comments.count <i class="fa fa-comment"></i></li>
+                      <% end %>
+                      <% if place.cutleries %>
+                        <li> place.cutleries.count <i class="fa fa-cutlery"></i></li>
+                      <% end %>
+                      <% if place.book_marks %>
+                        <li>place.book_marks.count <i class="fa fa-bookmark"></i></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                  <div class="caption">
+                    <h4><a href="single-package-left-sidebar.html" class="captionTitle"><%= place.name.truncate(20) %></a></h4>
+                    <span><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>  <%= place.address.truncate(40) %></span>
+                    <p><%= place.introduce.truncate(90) %></p>
+                    <div class="detailsInfo">
+                     <% if place.dating? %>
+                      <h5>
+                        <span>Dating</span>
+                        <%= place.upcoming_dating.count %> <i class="fa fa-calendar"></i>
+                      </h5>
+                      <% else %>
+                        <h5>
+                          <span>Start From</span>
+                          $<%= place.price_from %> 
+                        </h5>
+                      <% end %>
+                      <ul class="list-inline detailsBtn">
+                        <li></li>
+                        <li><%= link_to 'Details', place, class: "btn buttonTransparent" %></li>
+                        <li><a href="#" class="btn buttonTransparent"><i class="fa fa-bookmark" aria-hidden="true"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END PLACE -->

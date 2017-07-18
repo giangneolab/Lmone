@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Lmone</title>
-    <%= csrf_meta_tags %>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!-- SITE TITTLE -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lmone</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'colors/default.css', 'data-turbolinks-track': 'reload' ,id:"option_color"%>
   </head>
-
   <body>
-    <%= yield %>
+    <%= render 'layouts/switcher' %>
+    <div class="main-wrapper">
+      <!-- HEADER -->
+      <header>
+        <%= render 'layouts/nav' %>
+      </header>
+
+      <%= yield %>
+        <%= render 'layouts/footer' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
