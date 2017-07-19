@@ -8,7 +8,7 @@ end
 gem 'rails', '~> 5.1.2'
 # gem 'pg', '~> 0.18'
 gem 'sqlite3'
-gem 'puma', '~> 3.7'
+# gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
