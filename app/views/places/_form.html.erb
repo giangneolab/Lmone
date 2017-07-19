@@ -1,72 +1,73 @@
-<%= form_with(model: place, local: true) do |form| %>
-  <% if place.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+<div class="bookingForm">
+  <%= form_with(model: place, local: true, role: "form", class: "form") do |form| %>
+    <% if place.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
 
-      <ul>
-      <% place.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% place.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="form-group col-xs-12">
+        <%= form.label :name %>
+        <%= form.text_field :name, id: :place_name, class: 'form-control' %>
+      </div>
+      <div class="form-group col-xs-12">
+        <%= form.label :email %>
+        <%= form.text_field :email, id: :place_email, class: 'form-control'%>
+      </div>
+      <div class="form-group col-xs-12">
+        <%= form.label :logo_url %>
+        <%= form.text_field :logo_url, id: :place_logo_url, class: 'form-control' %>
+      </div>
+      <div class="form-group col-sm-6 col-xs-12">
+        <%= form.label :opening %>
+        <%= form.text_field :opening, id: :place_opening, class: 'form-control' %>
+      </div>
+      <div class="form-group col-sm-6 col-xs-12">
+        <%= form.label :closing %>
+        <%= form.text_field :closing, id: :place_closing, class: 'form-control' %>
+      </div>
+      <div class="form-group col-xs-12">
+        <%= form.label :phone_number %>
+        <%= form.text_field :phone_number, id: :place_phone_number, class: 'form-control'  %>
+      </div>
+      <div class="form-group col-xs-12">
+        <%= form.label :introduce %>
+        <%= form.text_area :introduce, id: :place_introduce, class: 'form-control' %>
+      </div>
+      <div class="form-group col-sm-6 col-xs-12">
+        <%= form.label :price_from %>
+        <%= form.number_field :price_from, id: :place_price_from, class: 'form-control' %>
+      </div>
+
+      <div class="form-group col-sm-6 col-xs-12">
+        <%= form.label :price_to %>
+        <%= form.number_field :price_to, id: :place_price_to, class: 'form-control' %>
+      </div>
+
+      <div class="form-group col-sm-6 col-xs-12">
+        <%= form.label :county %>
+        <%= form.text_field :county, id: :place_address, class: 'form-control' %>
+      </div>
+
+      <div class="form-group col-sm-6 col-xs-12">
+        <%= form.label :address %>
+        <%= form.text_field :address, id: :place_address, class: 'form-control' %>
+      </div>
+      <div class="col-xs-12">
+        <div class="buttonArea galleryBtnArea">
+          <ul class="list-inline">
+            <li><%= link_to 'Cancel', places_path, class: "btn buttonTransparent" %></li>
+            <li class="pull-right"><%= form.submit 'Save', class: "btn buttonTransparent"%></li>
+          </ul>
+        </div>
+      </div>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :place_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :place_email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :logo_url %>
-    <%= form.text_field :logo_url, id: :place_logo_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :opening %>
-    <%= form.number_field :opening, id: :place_opening %>
-  </div>
-
-  <div class="field">
-    <%= form.label :closing %>
-    <%= form.number_field :closing, id: :place_closing %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number, id: :place_phone_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label :introduce %>
-    <%= form.text_area :introduce, id: :place_introduce %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price_from %>
-    <%= form.text_field :price_from, id: :place_price_from %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price_to %>
-    <%= form.text_field :price_to, id: :place_price_to %>
-  </div>
-
-  <div class="field">
-    <%= form.label :county %>
-    <%= form.text_field :county, id: :place_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :place_address %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

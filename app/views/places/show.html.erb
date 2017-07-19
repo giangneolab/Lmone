@@ -1,59 +1,149 @@
 <p id="notice"><%= notice %></p>
+<%= render 'places/page_title', name: "Places", backgound_url: "img/pages/page-title-bg7.jpg" %>
+<div class="contaner">
+  <div class="row">
+    <div class="col-xs-12">
+        <div class="buttonArea galleryBtnArea">
+          <ul class="list-inline">
+            <li><%= link_to 'Back', places_path, class: "btn buttonTransparent" %></li>
+            <li class="pull-right"><a href="#" class= "btn buttonTransparent">comment</a> </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @place.email %>
-</p>
-
-<p>
-  <strong>Logo url:</strong>
-  <%= @place.logo_url %>
-</p>
-
-<p>
-  <strong>Opening:</strong>
-  <%= @place.opening %>
-</p>
-
-<p>
-  <strong>Closing:</strong>
-  <%= @place.closing %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @place.phone_number %>
-</p>
-
-<p>
-  <strong>Introduce:</strong>
-  <%= @place.introduce %>
-</p>
-
-<p>
-  <strong>Price from:</strong>
-  <%= @place.price_from %>
-</p>
-
-<p>
-  <strong>Price to:</strong>
-  <%= @place.price_to %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @place.address %>
-</p>
-
-<p>
-  <strong>Avg rating:</strong>
-  <%= @place.avg_rating %>
-</p>
-
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+    <!-- PAGE CONTENT -->
+    <section class="mainContentSection singlePackage">
+      <div class="container">
+        <div class="row ">
+          <div class="col-sm-3 col-sm-push-9 col-xs-12 blogSidebar">
+            <aside>
+              <%= render 'wigets/small_seachbox'%>
+              <%= render 'places/sitebar_datings'%>
+              <%= render 'wigets/categories'%>
+            </aside>
+          </div>
+          <div class="col-sm-9 col-sm-pull-3 col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+               <%= render 'places/slide_show'%>
+              </div>
+              <div class="col-xs-12">
+                <div class="well">
+                  <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                      <div class="infoImage"><img src="img/packages/package-info-01.png" alt="Info Image"></div>
+                    </div>
+                    <div class="col-sm-5 col-xs-12">
+                      <div class="packageInfo">
+                        <h4>Information</h4>
+                        <dl class="dl-horizontal">
+                          <dt>Location:</dt>
+                          <dd>Maldives</dd>
+                          <dt>Duration:</dt>
+                          <dd>jul 15, 2016 - Jul 18, 2016</dd>
+                          <dt>Available Seat:</dt>
+                          <dd>30</dd>
+                          <dt>Price:</dt>
+                          <dd><del>$8,050</del>  <span>$6,500</span></dd>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                      <div class="packageInfo">
+                        <h4>MALDIVES TOUR</h4>
+                        <p>3 Days Tour <span>$6,500</span></p>
+                        <a href="-2.html" class="btn buttonCustomPrimary" data-toggle="modal">BOOK NOW</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="generalInfo">
+                  <h2>General Information</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="panel-group" id="accordionIcons">
+                   <div class="panel panel-default">
+                     <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseOne">
+                         <span>Day 1 - some title here</span>
+                         <i class="indicator fa fa-minus  pull-right"></i>
+                     </a>                    
+                     <div id="collapseOne" class="panel-collapse collapse in">
+                       <div class="panel-body">
+                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       </div>
+                     </div>
+                   </div>
+                   <div class="panel panel-default">
+                       <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseTwo">
+                         <span>Day 1 - some title here</span>
+                         <i class="indicator fa fa-plus  pull-right"></i>
+                       </a>
+                     <div id="collapseTwo" class="panel-collapse collapse">
+                       <div class="panel-body">
+                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       </div>
+                     </div>
+                   </div>
+                   <div class="panel panel-default">
+                       <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseThree">
+                         <span>Day 1 - some title here</span>
+                         <i class="indicator fa fa-plus  pull-right"></i>
+                       </a>
+                     <div id="collapseThree" class="panel-collapse collapse">
+                       <div class="panel-body">
+                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       </div>
+                     </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="relatedProduct">
+              <h2>you may also like</h2>
+              <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                  <div class="relatedItem">
+                    <img src="img/packages/package-related-01.png" alt="related image">
+                    <div class="maskingInfo">
+                      <h4>maldives tour</h4>
+                      <p>Lorem Ipsum</p>
+                      <a href="#" class="btn buttonTransparent">view more</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                  <div class="relatedItem">
+                    <img src="img/packages/package-related-02.png" alt="related image">
+                    <div class="maskingInfo">
+                      <h4>maldives tour</h4>
+                      <p>Lorem Ipsum</p>
+                      <a href="#" class="btn buttonTransparent">view more</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                  <div class="relatedItem">
+                    <img src="img/packages/package-related-03.png" alt="related image">
+                    <div class="maskingInfo">
+                      <h4>maldives tour</h4>
+                      <p>Lorem Ipsum</p>
+                      <a href="#" class="btn buttonTransparent">view more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

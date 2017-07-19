@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @place.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @place.email %>
+</p>
+
+<p>
+  <strong>Logo url:</strong>
+  <%= @place.logo_url %>
+</p>
+
+<p>
+  <strong>Opening:</strong>
+  <%= @place.opening %>
+</p>
+
+<p>
+  <strong>Closing:</strong>
+  <%= @place.closing %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @place.phone_number %>
+</p>
+
+<p>
+  <strong>Introduce:</strong>
+  <%= @place.introduce %>
+</p>
+
+<p>
+  <strong>Price from:</strong>
+  <%= @place.price_from %>
+</p>
+
+<p>
+  <strong>Price to:</strong>
+  <%= @place.price_to %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @place.address %>
+</p>
+
+<p>
+  <strong>Avg rating:</strong>
+  <%= @place.avg_rating %>
+</p>
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>
